@@ -36,7 +36,7 @@ export const GENERATE_REPORT_TYPES = {
 	CELLS: "cells",
 };
 
-export const WEBHOOK_URL_BASE = IS_DEV ?
+export const WEBHOOK_URL_BASE = !IS_DEV ?
 	"http://localhost:9999/.netlify/functions/" :
 	"https://cld-collage-creator.netlify.app/.netlify/functions/";
 

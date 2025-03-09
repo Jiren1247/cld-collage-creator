@@ -1,1 +1,1 @@
-export default from "./TooltipIconButton";
+export { default } from "./TooltipIconButton";

@@ -11,6 +11,7 @@ const submitCreate = async (data) => {
 	fd.append("manifest_json", JSON.stringify(data.manifest));
 
 	try {
+		console.log("test here!");
 		const response = await fetch(
 			`https://api.cloudinary.com/v1_1/${data.cloud}/image/create_collage`,
 			{ method: "POST", body: fd },
