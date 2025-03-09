@@ -64,6 +64,11 @@ const CollagePhotos = () => {
 		setDrawerHeight(MIN_CONTAINER_HEIGHT);
 	};
 
+	const allAssets = [
+		...(damConfig?.assets || []), 
+		...(uploadedImages.map((url, index) => ({ id: `cloud-${index}`, url }))) // 生成伪 ID
+	];
+
 	return (
 		<StyledResizableBottomContainer
 			minHeight={MIN_CONTAINER_HEIGHT}
@@ -86,7 +91,7 @@ const CollagePhotos = () => {
 					rememberPreviousBatches
 					PreviewComponent={UploadingCard}
 				/>
-				{damConfig?.assets?.map((asset) =>
+				{allAssets.map((asset) =>
 					<AssetPhotoCard key={asset.id} asset={asset}/>)}
 				{photos.map((photoId) =>
 					<UploadPhotoCard key={photoId} id={photoId}/>)}

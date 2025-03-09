@@ -1,1 +1,1 @@
-export default from "./CollagePhotos";
+export {default} from "./CollagePhotos";
