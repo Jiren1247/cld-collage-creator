@@ -31,6 +31,7 @@ const AppContainer = styled.div`
 
 const CollageCreator = () => {
 	useCollagesPoller();
+	// const [uploadedImages, setUploadedImages] = useState([]);
 
 	return (
 		<UploadyConnector>
